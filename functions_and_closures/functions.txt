@@ -1,0 +1,25 @@
+We have three ways to declare function:
+  01- Traditional declaration:
+   function sayHello(arg1 : string , arg2 : number) : string {
+        return arg1 + " " + arg2;
+   }
+
+   02 - arrow function:
+      var sayHello = (arg1 : string , arg2 : number) : string => {
+           return arg1 + " " + arg2;
+      }
+
+   03- function expression:(The same when we create function type or function as type)
+        let yetAnotherFullName : (x:string, y:string) => string;
+
+        yetAnotherFullName = function (ar1:string, ar2:string) {
+            return ar1 + ' ' + ar2;
+        }
+        console.log(yetAnotherFullName('bada','mada'));
+
+
+        /* All in one line */
+        let anotherFullName : (first:string, last:string) => string = function(f_name:string, l_name:string) {
+            return f_name + ' ' + l_name;
+        }
+        console.log(anotherFullName('foo', 'bar'));
